@@ -26,7 +26,8 @@ namespace APBD_KOLPROB2.Configurations
                 new FireTruckAction { IdFireTruck = 1, IdAction = 2, AssignmentDate = System.DateTime.Today.AddDays(-12)},
                 new FireTruckAction { IdFireTruck = 4, IdAction = 2, AssignmentDate= System.DateTime.Today.AddDays(-12)},
                 new FireTruckAction { IdFireTruck = 2, IdAction = 1, AssignmentDate = System.DateTime.Today.AddDays(-5)},
-                new FireTruckAction { IdFireTruck = 4, IdAction = 3, AssignmentDate = System.DateTime.Today}
+                new FireTruckAction { IdFireTruck = 4, IdAction = 3, AssignmentDate = System.DateTime.Today},
+                new FireTruckAction { IdFireTruck = 3, IdAction = 2, AssignmentDate = System.DateTime.Today.AddDays(-11)}
             );
 
             builder.ToTable("FireTruck_Action");

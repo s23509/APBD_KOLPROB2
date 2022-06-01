@@ -8,5 +8,6 @@ namespace APBD_KOLPROB2.Services
     public interface IDBService
     {
         Task<IList<ActionDTO>> GetActionByIdAsync(int IdAction);
+        Task<Response> AddFireTruckToAction(AddFireTruckToActionDTO fireTruckToActionDTO);
     }
 }

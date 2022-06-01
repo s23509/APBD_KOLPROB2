@@ -1,4 +1,6 @@
-﻿using APBD_KOLPROB2.Services;
+﻿using APBD_KOLPROB2.DTO;
+using APBD_KOLPROB2.Responses;
+using APBD_KOLPROB2.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -22,5 +24,12 @@ namespace APBD_KOLPROB2.Controllers
             return Ok(task);
         }
 
+        [HttpPost("add-firetruck/")]
+        public async Task<IActionResult> AddFireTruck(AddFireTruckToActionDTO dto)
+        {
+            Response response = await _dbService.AddFireTruckToAction(dto);
+            return StatusCode((int)response.StatusCode, response.Message);
+
+        }
     }
 }

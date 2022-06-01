@@ -1,8 +1,10 @@
-﻿namespace APBD_KOLPROB2.Responses
+﻿using System.Net;
+
+namespace APBD_KOLPROB2.Responses
 {
-    public class Response<T>
+    public class Response
     {
-        public T Result { get; set; }  
-        public int StatusCode { get; set; }
+        public string Message { get; set; }   
+        public HttpStatusCode StatusCode { get; set; }
     }
 }
