@@ -1,6 +1,9 @@
+using APBD_KOLPROB2.Data;
+using APBD_KOLPROB2.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,7 +28,11 @@ namespace APBD_KOLPROB2
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddTransient<IDBService, DBService>();
+            services.AddDbContext<FireTruckStationContext>(opt =>
+            {
+                opt.UseSqlServer(Configuration.GetConnectionString("ConnString"));
+            });
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
