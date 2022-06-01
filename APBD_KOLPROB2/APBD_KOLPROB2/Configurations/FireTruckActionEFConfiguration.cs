@@ -4,11 +4,8 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace APBD_KOLPROB2.Configurations
 {
-    public class FireTruckActionEFConfiguration : IEntityTypeConfiguration<FireTruck>
+    public class FireTruckActionEFConfiguration : IEntityTypeConfiguration<FireTruckAction>
     {
-        public void Configure(EntityTypeBuilder<FireTruck> builder)
-        {
-            
-        }
+
     }
 }

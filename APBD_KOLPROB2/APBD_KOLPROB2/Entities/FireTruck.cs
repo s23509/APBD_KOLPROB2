@@ -5,7 +5,7 @@ namespace APBD_KOLPROB2.Entities
     public class FireTruck
     {
         public int IdFireTruck { get; set; }
-        public int OperationNumber { get; set; }
+        public string OperationNumber { get; set; }
         public bool SpecialEquipment { get; set; }
 
         public virtual ICollection<FireTruckAction> FireTruckActions { get; set; }
