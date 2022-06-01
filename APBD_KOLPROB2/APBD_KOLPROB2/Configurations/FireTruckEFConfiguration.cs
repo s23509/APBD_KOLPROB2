@@ -17,9 +17,8 @@ namespace APBD_KOLPROB2.Configurations
             builder.HasData(
                 new FireTruck { IdFireTruck = 1, OperationNumber = "1", SpecialEquipment = true },
                 new FireTruck { IdFireTruck = 2, OperationNumber = "11", SpecialEquipment = false },
-                new FireTruck { IdFireTruck = 3, OperationNumber = "113", SpecialEquipment = true },
-                new FireTruck { IdFireTruck = 4, OperationNumber = "256", SpecialEquipment = true },
-                new FireTruck { IdFireTruck = 5, OperationNumber = "313", SpecialEquipment = false }
+                new FireTruck { IdFireTruck = 3, OperationNumber = "113", SpecialEquipment = false },
+                new FireTruck { IdFireTruck = 4, OperationNumber = "2137", SpecialEquipment = true }
             );
 
             builder.ToTable("FireTruck");
